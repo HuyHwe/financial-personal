@@ -2,10 +2,11 @@ const express = require('express');
 const app = express();
 const {Client} = require('pg')
 const client = new Client({
-    host: 'localhost',
-    user: 'postgres',
+    host: 'ec2-44-194-92-192.compute-1.amazonaws.com',
+    user: 'mnqkzkedmpncrq',
     port: 5432,
-    database: 'Financial'
+    database: 'd15qumjtqi1hkk',
+    password: '5ea96a39e17e5f42e701873a078156a073911985bd4ce354844c80488affb8e3'
 });
 client.connect();
 const bodyParser = require('body-parser');
@@ -32,7 +33,8 @@ app.get('/:username', (req, res, next) => {
 });
 
 
-const PORT = 3001;
+app.set('port', process.env.PORT || 3001);
+
 app.listen(PORT, () => {
     console.log('listening to port ' + PORT)
 })
