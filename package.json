@@ -4,7 +4,8 @@
   "description": "a website to help organize money",
   "main": "server/app.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": ""
   },
   "author": "",
   "license": "ISC",
