@@ -7,7 +7,9 @@ const client = new Client({
     port: 5432,
     database: 'd15qumjtqi1hkk',
     password: '5ea96a39e17e5f42e701873a078156a073911985bd4ce354844c80488affb8e3',
-    ssl: true
+    ssl: {
+        require: true,
+        rejectUnauthorized: false}
 });
 client.connect();
 const bodyParser = require('body-parser');
