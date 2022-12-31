@@ -36,7 +36,7 @@ app.get('/:username', (req, res, next) => {
 });
 
 
-app.set('port', process.env.PORT || 3001);
+app.set('port', 5432);
 
 app.listen(app.get('port'), () => {
     console.log('listening to port ' + app.get('port'))
