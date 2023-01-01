@@ -11,7 +11,7 @@ const client = new Client({
         require: true,
         rejectUnauthorized: false}
 });
-client.connect();
+await client.connect();
 const bodyParser = require('body-parser');
 const walletRouter = require('./wallet');
 const accountRouter = require('./account');
