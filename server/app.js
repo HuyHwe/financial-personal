@@ -17,6 +17,10 @@ const walletRouter = require('./wallet');
 const accountRouter = require('./account');
 
 app.use(bodyParser.urlencoded({extended:true}));
+app.get('/', (req,res, next) => {
+    res.send('Hello')
+    next()
+})
 app.use('/:username/wallet',(req, res, next) => {
     req.username = req.params.username;
     next();
